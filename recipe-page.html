@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>أكلة | Okla</title>
+    <link rel="shortcut icon" href="/okla-logo.png" type="image/x-icon">
+    <link rel="icon" href="/okla-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/recipe-page.css">
+    <script src="js/vendor/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>وصفات</li>
+                <li>نصائح</li>
+                <li class="logo" onclick="location.href = 'index.html';">
+                    <span>أكلة</span>
+                    <span><img src="img/icon.svg"></span>
+                    <span>Okla</span>
+                </li>
+                <li>من نحن</li>
+                <li>راسلنا</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="cover">
+        <div class="container">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="share">
+            <div class="fav-icon content-center">
+                <i class="material-icons">
+                    share
+                </i>
+            </div>
+        </div>
+    </section>
+    <section class="info">
+        <div class="numbers">
+            <span class="icon">
+                <i class="material-icons">
+                    supervisor_account
+                </i>
+            </span>
+            <span>3</span>
+            <span>أشخاص</span>
+        </div>
+        <div class="divider"></div>
+        <div class="time">
+            <span class="icon">
+                <i class="material-icons">
+                    timer
+                </i>
+            </span>
+            <span>25</span>
+            <span>دقيقة</span>
+        </div>
+    </section>
+    <section class="recipe-data">
+        <div class="ingredient">
+            <div class="label content-center">المقادير</div>
+            <div class="container">
+                <ul id="ingredients_data-container"></ul>
+            </div>
+        </div>
+        <div class="video"></div>
+        <div class="steps">
+            <div class="label content-center">طريقة التحضير</div>
+            <div class="container">
+                <ol id="setps_data-container"></ol>
+            </div>
+        </div>
+    </section>
+    <div id="created-at" style="direction: ltr; color: #9E9E9E">2020-04-07 22:45:40</div>
+    <div class="tags">
+      <div class="tag-label">الكلمات المفتاحية :</div>
+      <div id="tags-container"></div>
+    </div>
+    <section class="suggestions">
+        <div class="custom-label">
+            <div class="label content-center">المزيد من الوصفات</div>
+        </div>
+        <div class="horizontal-scroll-era">
+            <div class="right controler">
+                <i class="material-icons">
+                    chevron_right
+                </i>
+            </div>
+            <div class="left controler">
+                <i class="material-icons">
+                    chevron_left
+                </i>
+            </div>
+            <div class="data" id="recommendations">
+                <!-- TODO: display sugestion data here -->
+            </div>
+        </div>
+    </section>
+
+    <script src="js/recipe_page.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+header {
+    background: colors(bg);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    nav {
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: colors(s);
+
+            li.logo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                span {
+                    color: colors(p);
+                    font-weight: bolder;
+                    font-size: 25px;
+                }
+
+
+                img {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}

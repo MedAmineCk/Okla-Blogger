@@ -1,0 +1,78 @@
+section.suggestions {
+  width: 100%;
+}
+
+section.suggestions nav {
+  background: colors(bg);
+  width: 600px;
+  height: 80px;
+  border-radius: 80px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  color: colors(s);
+  margin: -40px auto 0 auto;
+}
+
+section.suggestions .horizontal-scroll-era {
+  width: 100%;
+  position: relative;
+}
+
+section.suggestions .horizontal-scroll-era .controler {
+  position: absolute;
+  z-index: 2;
+  height: 160px;
+  width: 80px;
+  background: colors(bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+section.suggestions .horizontal-scroll-era .controler i {
+  font-size: 60px;
+  color: colors(s);
+}
+
+section.suggestions .horizontal-scroll-era .controler.left {
+  left: 0;
+  border-bottom-right-radius: 160px;
+  border-top-right-radius: 160px;
+}
+
+section.suggestions .horizontal-scroll-era .controler.right {
+  right: 0;
+  border-bottom-left-radius: 160px;
+  border-top-left-radius: 160px;
+}
+
+section.suggestions .horizontal-scroll-era .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  position: relative;
+}
+
+section.suggestions .horizontal-scroll-era .data::-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=suggestions.css.map */

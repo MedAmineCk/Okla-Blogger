@@ -1,0 +1,64 @@
+section.suggestions {
+    width: 100%;
+
+    nav {
+        $nav_height: 80px;
+        background: colors(bg);
+        width: 600px;
+        height: $nav_height;
+        border-radius: $nav_height;
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 20px;
+        color: colors(s);
+        margin: -$nav_height/2 auto 0 auto;
+    }
+
+    .horizontal-scroll-era {
+        width: 100%;
+        position: relative;
+
+        .controler {
+            $size: 80px;
+            position: absolute;
+            z-index: 2;
+            height: $size * 2;
+            width: $size;
+            background: colors(bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            transform: translateY(-50%);
+
+            i {
+                font-size: 60px;
+                color: colors(s);
+            }
+
+            &.left {
+                left: 0;
+                border-bottom-right-radius: $size * 2;
+                border-top-right-radius: $size * 2;
+            }
+
+            &.right {
+                right: 0;
+                border-bottom-left-radius: $size * 2;
+                border-top-left-radius: $size * 2;
+            }
+        }
+
+        .data {
+            display: flex;
+            overflow-x: auto;
+            position: relative;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}

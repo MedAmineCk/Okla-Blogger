@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- jQuery JS 3.1.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+</head>
+
+<body>
+    <header>
+        <div class="search">
+            <div class="icon">
+                <i class="material-icons">
+                    search
+                </i>
+            </div>
+            <input type="search" placeholder="البحث عن المنشورات">
+        </div>
+        <form action="logout.php" method="post">
+            <button type="submit">تسجيل الخروج</button>
+        </form>
+    </header>
+    <aside class="nav">
+        <div class="logo">
+            <span>أكلة</span>
+            <span><img src="../img/icon.svg"></span>
+            <span>Okla</span>
+        </div>
+        <nav>
+            <a href="#" class="active" onclick="$('#main_content').load('../sections/dashboard.php')">
+                <span class="material-icons">menu_book</span>
+                </span>
+                <p>الوصفات</p>
+            </a>
+            <a href="#" onclick="$('#main_content').load('../sections/data.php')">
+                <span>
+                    <span class="material-icons">
+                        info
+                    </span>
+                </span>
+                <p>المعلومات</p>
+            </a>
+            <a href="#" onclick="$('#main_content').load('../sections/data.php')">
+                <span>
+                    <span class="material-icons">
+                        insert_photo
+                    </span>
+                </span>
+                <p>صور لخلفية الهاتف</p>
+            </a>
+        </nav>
+    </aside>
+    <section class="container">
+        <div class="add animated" onclick="window.location.href = 'add_recipe.php'">
+            <span class="material-icons">
+                add
+                </span>
+        </div>
+        <div id="main_content">
+          <div class="container" id="data-container">
+            <div class="status">
+              <nav>
+                <a href="#" class="active" data-status="">الحلويات</a>
+                <a href="#" data-status="">مقبلات</a>
+                <a href="#" data-status="accepted">مملحات</a>
+                <a href="#" data-status="refused">أطباق رئيسية</a>
+                <a href="#" data-status="new">وجبات خفيفة</a>
+              </nav>
+            </div>
+            <div class="search">
+              <div class="filter">
+                <select name="filter" id="filter">
+                  <option value="today">ترتيب حسب</option>
+                  <option value="last 7day">الأكثر مشاهدة</option>
+                  <option value="last 30day">الأحدثية</option>
+                  <option value="last 60day">الأقدمية</option>
+                </select>
+              </div>
+              <div class="search-input">
+                <div class="search-icon">
+                  <i class="material-icons">
+                    search
+                  </i>
+                </div>
+                <input type="search" placeholder="البحث عن الوصفات">
+              </div>
+            </div>
+            <div class="data-table">
+              <table>
+                <thead>
+                <tr>
+                  <th>
+                    <div class="select" id="actions_container">
+                      <div class="drop">
+                        <input type="checkbox">
+                        <i class="material-icons" onclick="$('.actions').show(100)">
+                          arrow_drop_down
+                        </i>
+                      </div>
+                      <div class="actions">
+                        <div class="item" data-type="delete">حذف</div>
+                        <div class="item" data-type="public">نشر</div>
+                        <div class="item" data-type="private">خاص</div>
+                      </div>
+                    </div>
+                  </th>
+                  <th>صور</th>
+                  <th>رقم</th>
+                  <th>عنوان</th>
+                  <th>فئة</th>
+                  <th>تاريخ الإنشاء</th>
+                  <th>المشاهداة</th>
+                  <th>الوضعية</th>
+                </tr>
+                </thead>
+                <tbody id="display-data">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </section>
+    <script src="../js/main.js"></script>
+    <script src="../js/display_data.js" async></script>
+    <script src="../js/actions.js"></script>
+
+    <script>
+        $('.status nav a').on('click', function () {
+            $('.status nav a').removeClass('active');
+            $(this).addClass('active');
+            filter($(this).data('status'));
+        })
+
+        $(window).click(function () {
+            $('.actions').hide(100)
+        });
+
+        $('#actions_container').click(function (event) {
+            event.stopPropagation();
+        });
+    </script>
+</body>
+
+</html>

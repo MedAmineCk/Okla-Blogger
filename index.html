@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <header>
+    <nav>
+      <ul>
+        <li>وصفات</li>
+        <li>نصائح</li>
+        <li class="logo">
+          <span>أكلة</span>
+          <span><img src="img/icon.svg" alt="okla-icon"></span>
+          <span>Okla</span>
+        </li>
+        <li>من نحن</li>
+        <li>راسلنا</li>
+      </ul>
+    </nav>
+  </header>
+  <section class="cover">
+    <div class="container content-center">
+      <h1>إذن ماذا نطبخ اليوم؟</h1>
+      <div class="search">
+        <div class="recipes icon">
+          <img src="img/recipes-icon.svg">
+        </div>
+        <input type="text" placeholder=" إبحث عن وصفة">
+        <div class="divider"></div>
+        <select name="" id="">
+          <option value="التصنيفات" selected disabled>التصنيفات</option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <div class="search-btn content-center">
+          <i class="material-icons">
+            search
+          </i>
+        </div>
+      </div>
+      <p>حدد الصنف قبل البحث عن الوصفات</p>
+    </div>
+  </section>
+  <section class="suggestions">
+    <nav>
+      <div class="item">الأكثر مشاهدة</div>
+      <div class="item">الأفطل تقييما</div>
+      <div class="item">اكثر تفضيلا</div>
+    </nav>
+    <div class="horizontal-scroll-era">
+      <div class="right controler">
+        <i class="material-icons">
+          chevron_right
+        </i>
+      </div>
+      <div class="left controler">
+        <i class="material-icons">
+          chevron_left
+        </i>
+      </div>
+      <div class="data" id="recommendations"></div>
+    </div>
+  </section>
+  <section class="recipes">
+    <div class="title content-center">
+      <hr>
+      <h1>وصفات</h1>
+    </div>
+    <div class="description">
+      <p>لنطبخ شيئًا رائعًا معًا</p>
+    </div>
+    <div class="filters" id="categories"></div>
+    <div class="data-container" id="all_recipes">
+      <!-- TODO: display all data here -->
+    </div>
+    <div class="load-more">تحميل المزيد</div>
+  </section>
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

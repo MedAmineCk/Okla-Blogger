@@ -1,0 +1,598 @@
+@import url("https://fonts.googleapis.com/css?family=Almarai&display=swap");
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes rubberBand {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Almarai', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #2e43ff;
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+body::-webkit-scrollbar,
+.scroll::-webkit-scrollbar {
+  width: 10px;
+  background: #000;
+}
+
+body::-webkit-scrollbar-track,
+.scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb,
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #880E4F;
+}
+
+.logo {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 50px;
+}
+
+.logo span {
+  color: #F93481;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.logo img {
+  margin: 0 10px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #F4F4F4;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "nav header header" "nav container profile";
+  -ms-grid-columns: 280px 1fr;
+      grid-template-columns: 280px 1fr;
+  -ms-grid-rows: 80px 1fr;
+      grid-template-rows: 80px 1fr;
+}
+
+body header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  padding: 0 20px;
+}
+
+body header .search {
+  width: 300px;
+  height: 35px;
+  position: relative;
+}
+
+body header .search input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  outline: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border: none;
+  padding-right: 35px;
+  color: #646464;
+}
+
+body header .search .icon {
+  position: absolute;
+  z-index: 2;
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .search .icon i {
+  color: #646464;
+}
+
+body header button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  background: #327087;
+  color: #fff;
+}
+
+body aside.nav {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: nav;
+  height: 100vh;
+  background: #fff;
+}
+
+body aside.nav nav {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body aside.nav nav a {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  color: #cdcdda;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all linear .1s;
+  transition: all linear .1s;
+}
+
+body aside.nav nav a.active {
+  color: #555555;
+  border-left: 2px solid #F93481;
+  font-size: 20px;
+}
+
+body aside.nav nav a.active span {
+  font-size: 35px;
+  color: #F93481;
+}
+
+body aside.nav nav a span {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+body aside.nav nav a p {
+  padding-left: 10px;
+}
+
+body aside.nav nav a:hover {
+  border-left: 2px solid #F93481;
+}
+
+body aside.nav nav a:hover p,
+body aside.nav nav a:hover i {
+  color: #F93481;
+}
+
+body section.container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: container;
+  position: relative;
+  padding: 20px;
+}
+
+body section.container .filter select {
+  width: 120px;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  padding: 4px;
+}
+
+body section.container .add {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background: #327087;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all linear .1s;
+  transition: all linear .1s;
+}
+
+body section.container .add:hover {
+  border: 2px solid #327087;
+  background: white;
+  color: #327087;
+  -webkit-animation-name: rubberBand;
+          animation-name: rubberBand;
+}
+
+body section.container .add span {
+  font-size: 45px;
+}
+
+body #data-container {
+  width: 100%;
+  border: 1px solid #cdcdda;
+  border-radius: 4px;
+  background: white;
+  padding: 0 20px;
+  margin-top: 40px;
+}
+
+body #data-container .status {
+  width: 100%;
+  height: 65px;
+  border-bottom: 1px solid #cdcdda;
+  margin-bottom: 20px;
+}
+
+body #data-container .status nav {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #data-container .status nav a {
+  margin-right: 45px;
+  color: #646464;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #data-container .status nav a.active {
+  color: black;
+  border-bottom: 2px solid;
+}
+
+body #data-container .search {
+  width: 100%;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #cdcdda;
+  margin-bottom: 20px;
+}
+
+body #data-container .search .filter {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  background: #ccc;
+}
+
+body #data-container .search .filter select {
+  width: 100%;
+  height: 100%;
+  padding: 10px 2px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none;
+  color: #555555;
+  background: #f8f8f8;
+  font-size: 14px;
+  font-family: 'Montserrat', serif;
+  cursor: pointer;
+}
+
+body #data-container .search .filter select option {
+  color: #646464;
+}
+
+body #data-container .search .search-input {
+  width: calc(100% - 140px);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #data-container .search .search-input .search-icon {
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #data-container .search .search-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 35px;
+}
+
+body #data-container .data-table {
+  width: 100%;
+}
+
+body #data-container .data-table table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+body #data-container .data-table table tr {
+  height: 60px;
+  border-bottom: 1px solid #646464;
+}
+
+body #data-container .data-table table tr.data-item:hover {
+  background-color: #ECEFF1;
+  cursor: pointer;
+  -webkit-transition: all linear .2s;
+  transition: all linear .2s;
+}
+
+body #data-container .data-table table tr input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+body #data-container .data-table table tr .select {
+  width: 80px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid #9ca0b1;
+  border-radius: 4px;
+  position: relative;
+}
+
+body #data-container .data-table table tr .select .drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px;
+  background: #f7f7f7;
+}
+
+body #data-container .data-table table tr .select .drop input {
+  width: 22px;
+  height: 22px;
+}
+
+body #data-container .data-table table tr .select .drop i {
+  font-size: 35px;
+  cursor: pointer;
+}
+
+body #data-container .data-table table tr .select .actions {
+  display: none;
+  position: absolute;
+  border: 1px solid #9ca0b1;
+  border-radius: 0 0 4px 4px;
+  width: 80px;
+  background: #fff;
+}
+
+body #data-container .data-table table tr .select .actions .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 35px;
+}
+
+body #data-container .data-table table tr .select .actions .item:hover {
+  background: #2196F3;
+  color: #fff;
+  cursor: pointer;
+}
+
+body #data-container .data-table table tr th {
+  font-weight: bold;
+  color: #424242;
+}
+
+body #data-container .data-table table tr th:first-of-type {
+  width: 80px;
+}
+
+body #data-container .data-table table tr th:nth-of-type(2) {
+  width: 80px;
+  height: 80px;
+}
+
+body #data-container .data-table table tr td {
+  text-align: center;
+  color: #555555;
+}
+
+body #data-container .data-table table tr td:nth-of-type(2) {
+  width: 80px;
+  height: 80px;
+}
+
+body #data-container .data-table table tr td:nth-of-type(2) img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body #data-container .data-table table tr td .statu {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 35px;
+  margin: 0 auto;
+}
+
+body #data-container .data-table table tr td .statu[data-statu="public"] {
+  background: #00bef8;
+  color: #fff;
+}
+
+body #data-container .data-table table tr td .statu[data-statu="private"] {
+  background: #F9C434;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */

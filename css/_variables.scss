@@ -1,0 +1,26 @@
+$colors:(p: #F93481, pp: rgba(249, 52, 127, 0.096), s: #3a3a3a, bg: #FFFFFF);
+$padding: 10px;
+$border: 1px solid #607D8B;
+$border-radius: 4px;
+
+@function colors($color-name) {
+    @return map-get($map: $colors, $key: $color-name);
+}
+
+$tablet: 1134px;
+$mobile: 500px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+//******** Fonts ********//
+@import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
